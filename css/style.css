@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     /* debug */
-    border: 1px solid crimson;
+    /* border: 1px solid crimson; */
 }
 
 .container {
@@ -11,15 +11,31 @@
     height: 100vh;
 }
 
-header {
+header,
+footer {
     width: 100%;
     height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+header h1,
+footer p {
+    color: steelblue;
+}
+
+header button {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 main {
     width: 100%;
     height: 80vh;
-    background-color: aqua;
+    background-color: steelblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,17 +44,24 @@ main {
 .grid {
     width: 500px;
     height: 500px;
-    border: 1px solid blue;
-    display: flex;
     flex-wrap: wrap;
+    display: none;
+    border: 1px solid whitesmoke;
+}
+
+.active {
+    display: flex;
 }
 
 .cell {
     width: 10%;
-    background-color: azure;
+    border: 1px solid whitesmoke;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-footer {
-    width: 100%;
-    height: 10vh;
+.cll-active {
+    background-color: skyblue;
 }
